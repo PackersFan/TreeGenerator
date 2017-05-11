@@ -6,22 +6,23 @@ Description: This creates the roots table which contains the top level parent no
 
 */ 
 
+
 CREATE TABLE Roots ( 
 
-ID					int			PRIMARY KEY,
+ID					int			PRIMARY KEY IDENTITY(1,1),
 name				varchar(255), 
-children_count		int,
-active				int
+children_count		int			DEFAULT 0,
+active				int			DEFAULT 1
 
 );
 
 CREATE TABLE Factory ( 
 
-ID					int			PRIMARY KEY,
-parent				int			FOREIGN KEY REFERENCES Factory(ID),
+ID					int			PRIMARY KEY IDENTITY(1,1),
+parent_ID			int			FOREIGN KEY REFERENCES Factory(ID),
 name				varchar(255),
-children_count		int,
+children_count		int			DEFAULT 0,
 low_bound			int			DEFAULT 0 ,
-up_bound			int			DEFAULT 15
-
+up_bound			int			DEFAULT 15,
+active				int			DEFAULT 1
 ); 
