@@ -7,12 +7,11 @@ namespace TreeGenerator.Models
 {
     public class Root
     {
-       int ID { get; set; }
-       string name { get; set; }
-       string children_count { get; set; }
-       int active { get; set; }
+       public int ID { get; set; }
+       public string name { get; set; }
+       public string children_count { get; set; }
+       public int active { get; set; }
 
     }
-
 
 }

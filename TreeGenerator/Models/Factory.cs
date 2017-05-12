@@ -7,13 +7,14 @@ namespace TreeGenerator.Models
 {
     public class Factory
     {
-        int ID { get; set; }
-        int parent { get; set; }
-        string name { get; set; }
-        int childrenCount { get; set; }
-        int lowBound { get; set; }
-        int upBound { get; set; }
-
+        public int ID { get; set; }
+        public int parent { get; set; }
+        public int depth { get; set; }
+        public string name { get; set; }
+        public int childrenCount { get; set; }
+        public int lowBound { get; set; }
+        public int upBound { get; set; }
+        public List<Factory> children { get; set; }
 
 
     }
